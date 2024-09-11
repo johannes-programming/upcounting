@@ -1,4 +1,3 @@
-
 def count_up(start=0, stop=None, step=1):
     ans = start
     while True:
