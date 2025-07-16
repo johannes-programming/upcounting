@@ -3,8 +3,7 @@ import unittest
 __all__ = ["test"]
 
 
-def test() -> unittest.TextTestRunner:
-    "This function runs all the tests."
+def test():
     loader = unittest.TestLoader()
     tests = loader.discover(start_dir="upcounting.tests")
     runner = unittest.TextTestRunner()
