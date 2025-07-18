@@ -23,8 +23,8 @@ description = "This project counts until meeting a condition. Infinite counting 
 keywords = []
 name = "upcounting"
 readme = "README.rst"
-requires-python = ">=3.8"
-version = "1.0.3"
+requires-python = ">=3.11"
+version = "1.0.4"
 
 [project.license]
 file = "LICENSE.txt"
