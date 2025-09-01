@@ -18,10 +18,22 @@
                     <dd id="linksCorpus"></dd>
                     <dt id="install">Installation</dt>
                     <dd id="installCorpus"></dd>
-                    <dt id="implementation">Implementation</dt>
-                    <dd id="implementationCorpus">
-<pre class="block"><code>def count_up(start=0, stop=None, step=1):
-    ans = start
+                    <dt id="features">Features</dt>
+                    <dd id="featuresCorpus">
+                        <dl class="heading4">
+                            <dt id="count_up">upcounting.count_up(start: Any = 0, stop: Any = None, step: Any = 1) -> Generator[Any, None, None]</dt>
+                            <dd>
+                                <p>This generator is at the center of this project.</p>
+                                <pre class="block"><code>from typing import *
+
+__all__ = ["count_up"]
+
+
+def count_up(
+    start: Any = 0, stop: Any = None, step: Any = 1
+) -> Generator[Any, None, None]:
+    "This generator counts upwards."
+    ans: Any = start
     while True:
         if stop is None:
             pass
@@ -33,6 +45,8 @@
                 break
         yield ans
         ans += step</code></pre>
+                            </dd>
+                        </dl>
                     </dd>
                     <dt id="testing">Testing</dt>
                     <dd id="testingCorpus"></dd>
