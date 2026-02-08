@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "upcounting"
-version = "0.0.0"
+version = "1.0.0"
 description = "Counts until condition. Infinite counting is also supported."
 readme = "README.rst"
 authors = [
