@@ -1,0 +1,78 @@
+Introduction
+------------
+
+This project counts until meeting a condition. Infinite counting is also supported.
+
+Links
+-----
+
+- Download: https://pypi.org/project/upcounting/#files
+- Index: https://pypi.org/project/upcounting/
+- Source: https://github.com/johannes-programming/upcounting/
+- Website: https://upcounting.johannes-programming.online/
+
+Installation
+------------
+
+To install upcounting, you can use pip. Open your terminal and run:
+
+.. code-block:: shell
+
+    pip install upcounting
+
+Features
+--------
+
+``upcounting.count_up(start: Any = 0, stop: Any = None, step: Any = 1) -> Generator[Any, None, None]``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This generator is at the center of this project.
+
+.. code-block:: python
+
+    from typing import *
+
+    __all__ = ["count_up"]
+
+
+    def count_up(
+        start: Any = 0, stop: Any = None, step: Any = 1
+    ) -> Generator[Any, None, None]:
+        "This generator counts upwards."
+        ans: Any = start
+        while True:
+            if stop is None:
+                pass
+            elif callable(stop):
+                if stop(ans):
+                    break
+            else:
+                if ans >= stop:
+                    break
+            yield ans
+            ans += step
+
+``upcounting.test() -> unittest.TextTestResult``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This project can be tested through its test function.
+
+.. code-block:: python
+
+    import upcounting
+    upcounting.test()
+
+License
+-------
+
+This project is licensed under the MIT License.
+
+Impressum
+---------
+
+**Johannes Programming**
+
+- Name: Johannes
+- Email: johannes.programming@gmail.com
+- Homepage: https://www.johannes-programming.online/
+- Gravatar: https://www.johannes-programming.fyi/
